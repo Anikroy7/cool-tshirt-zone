@@ -1,9 +1,24 @@
 import React from 'react';
-
+import useShirts from '../../hooks/useShirts';
+import Shirt from '../Shirt/Shirt'
+import './Home.css';
 const Home = () => {
+
+    const [shirts, setShirts] = useShirts();
+
     return (
         <div>
-            <h1>This is home</h1>
+            <div className="home-container">
+                <div className="tshirts-container">
+
+                    {
+                        shirts.map(shirt => <Shirt shirt={shirt}></Shirt>)
+                    }
+                </div>
+                <div className="cart">
+                    <h1>ordered cart</h1>
+                </div>
+            </div>
         </div>
     );
 };

@@ -1,0 +1,27 @@
+.shirt-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    margin: 8px;
+
+}
+
+.shirt-container {
+    background-color: rgb(194, 147, 180);
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+.cart-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0;
+    color: aliceblue;
+    background-color: rgb(54, 54, 107);
+}
+
+.cart-btn:hover {
+    background-color: rgb(37, 37, 49);
+}
