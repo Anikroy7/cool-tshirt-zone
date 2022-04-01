@@ -7,6 +7,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin: 50px;
+    margin: 20px;
 
+}
+
+.cart-container {
+    position: sticky;
+    top: 0;
+    background-color: rgb(247, 215, 250);
+    border-radius: 10px;
 }
