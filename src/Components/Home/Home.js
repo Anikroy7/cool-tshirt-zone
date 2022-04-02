@@ -65,7 +65,7 @@ const Home = () => {
                     ></Cart>)
                 }
                 {
-                    carts.length > 4 ? <button onClick={removeAllFromCart}>remove all</button> : <p>please added items...</p>
+                    carts.length > 3 ? <button onClick={removeAllFromCart}>remove all</button> : <p>please added items...</p>
                 }
 
             </div>

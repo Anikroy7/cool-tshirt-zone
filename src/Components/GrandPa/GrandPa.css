@@ -1,0 +1,21 @@
+.main {
+    border: 2px solid rgb(0, 81, 255);
+    margin: 10px;
+    padding: 10px;
+}
+
+.grandpa {
+    display: flex;
+    padding: 10px;
+    border: 2px solid darkmagenta;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.grandpa div {
+    border: 2px solid rgb(79, 80, 80);
+    background-color: rgb(108, 192, 192);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
