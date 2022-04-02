@@ -1,6 +1,7 @@
 .home-container {
     display: grid;
     grid-template-columns: 4fr 1fr;
+
 }
 
 .tshirts-container {
@@ -11,9 +12,14 @@
 
 }
 
-.cart-container {
+.home-container .cart-container {
+    background-color: rgb(184, 151, 189);
+    border-radius: 10px;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background-color: rgb(247, 215, 250);
-    border-radius: 10px;
+    padding: 5px;
+    background-color: #d6e6d6;
+    border: 2px solid #4CAF50;
+
 }

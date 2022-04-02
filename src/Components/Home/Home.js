@@ -9,6 +9,16 @@ const Home = () => {
 
     const [carts, setCarts] = useState([]);
 
+    // let commad;
+
+    // if (carts.length === 4) {
+    //     commad = <p>added four items</p>
+    // }
+    // else if (carts.length === 0) {
+    //     commad = <p>please added items...</p>
+    // }
+
+
     const handelAddToCart = cart => {
         const exists = carts.find(pd => pd._id === cart._id);
         if (!exists) {
@@ -28,28 +38,30 @@ const Home = () => {
     }
 
     return (
-        <div>
-            <div className="home-container">
-                <div className="tshirts-container">
+        <div className="home-container">
+            <div className="tshirts-container">
 
-                    {
-                        shirts.map(shirt => <Shirt
-                            shirt={shirt}
-                            handelAddToCart={handelAddToCart}
-                        ></Shirt>)
-                    }
-                </div>
-                <div className="cart-container">
-                    <h2>ordered cart:{carts.length}</h2>
+                {
+                    shirts.map(shirt => <Shirt
+                        shirt={shirt}
+                        handelAddToCart={handelAddToCart}
+                    ></Shirt>)
+                }
+            </div>
+            <div className="cart-container">
+                <h3>ordered item:{carts.length}</h3>
+                {/* {commad} */}
 
-                    {
-                        carts.map(product => <Cart
-                            products={product}
-                            removeFromCart={removeFromCart}
-                        ></Cart>)
-                    }
+                {
+                    carts.map(product => <Cart
+                        products={product}
+                        removeFromCart={removeFromCart}
+                    ></Cart>)
+                }
+                {
+                    carts.length === 4 ? <button>remove all</button> : <p>please added items...</p>
+                }
 
-                </div>
             </div>
         </div >
     );
