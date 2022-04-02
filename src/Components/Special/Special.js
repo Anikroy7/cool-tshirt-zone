@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { GiftContext } from '../GrandPa/GrandPa';
 
-const Special = ({ ornament, house }) => {
+const Special = () => {
+
+    const gift = useContext(GiftContext)
     return (
         <div>
             <h3>Girlfriend</h3>
-            <h4>house: {house}</h4>
-            <h4>ornament:{ornament}</h4>
+            <h4>house: {gift}</h4>
 
         </div>
     );
