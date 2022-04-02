@@ -32,6 +32,12 @@ const Home = () => {
 
     }
 
+    const removeAllFromCart = () => {
+
+        setCarts([]);
+
+    }
+
     const removeFromCart = (product) => {
         const rest = carts.filter(pd => pd._id !== product._id)
         setCarts(rest)
@@ -59,7 +65,7 @@ const Home = () => {
                     ></Cart>)
                 }
                 {
-                    carts.length === 4 ? <button>remove all</button> : <p>please added items...</p>
+                    carts.length > 4 ? <button onClick={removeAllFromCart}>remove all</button> : <p>please added items...</p>
                 }
 
             </div>
