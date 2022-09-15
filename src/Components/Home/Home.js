@@ -9,16 +9,6 @@ const Home = () => {
 
     const [carts, setCarts] = useState([]);
 
-    // let commad;
-
-    // if (carts.length === 4) {
-    //     commad = <p>added four items</p>
-    // }
-    // else if (carts.length === 0) {
-    //     commad = <p>please added items...</p>
-    // }
-
-
     const handelAddToCart = cart => {
         const exists = carts.find(pd => pd._id === cart._id);
         if (!exists) {
@@ -27,7 +17,7 @@ const Home = () => {
             setCarts(newCart);
         }
         else {
-            alert('already added')
+            alert('Already added')
         }
 
     }
@@ -51,11 +41,12 @@ const Home = () => {
                     shirts.map(shirt => <Shirt
                         shirt={shirt}
                         handelAddToCart={handelAddToCart}
+                        key={shirt._id}
                     ></Shirt>)
                 }
             </div>
             <div className="cart-container">
-                <h3>ordered item:{carts.length}</h3>
+                <h3>Ordered item:{carts.length}</h3>
                 {/* {commad} */}
 
                 {
